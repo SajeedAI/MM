@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mancherial Minerals supplies premium natural stone, marble and tile materials for homes, commercial projects and dealers." />
+  <title>Mancherial Minerals | Natural Stone & Tiles</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            stonegold: '#b98a45',
+            charcoal: '#171717',
+            cream: '#f6f0e7',
+            wine: '#6f3543'
+          },
+          boxShadow: {
+            soft: '0 18px 55px rgba(23, 23, 23, 0.10)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #f8f6f2; }
+    .stone-texture {
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.94), rgba(255,255,255,.72)),
+        url('assets/stone-core-01.jpeg') center/cover;
+    }
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.75) 46%, rgba(10,10,10,.25) 100%),
+        url('assets/stone-core-04.jpeg') center/cover;
+    }
+    .gallery-card img { transition: transform .55s ease; }
+    .gallery-card:hover img { transform: scale(1.06); }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 2px;
+      background: #b98a45;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+
+<body class="font-sans text-neutral-800">
+
+  <!-- Header -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-neutral-950/85 backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="grid h-11 w-11 place-items-center rounded-full border border-stonegold/70 bg-stonegold/10 text-lg font-bold text-stonegold">
+          MM
+        </div>
+        <div>
+          <p class="font-display text-xl leading-none tracking-wide text-white">Mancherial Minerals</p>
+          <p class="mt-1 text-[10px] uppercase tracking-[0.3em] text-neutral-400">Natural Stone & Tiles</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-medium text-neutral-200 md:flex">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#products">Products</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden rounded-full bg-stonegold px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#a77835] md:inline-flex">
+        Get a Quote
+      </a>
+
+      <button id="menuBtn" class="rounded-lg border border-white/15 p-2 text-white md:hidden" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-neutral-950 px-5 py-5 md:hidden">
+      <div class="flex flex-col gap-4 text-neutral-200">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero-overlay relative flex min-h-screen items-center pt-20">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(185,138,69,.18),transparent_35%)]"></div>
+
+    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-12 lg:px-8">
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 rounded-full border border-stonegold/40 bg-stonegold/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#e3c28f]">
+          Premium Natural Stone
+        </span>
+
+        <h1 class="mt-7 max-w-4xl font-display text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+          Strength from the earth.
+          <span class="block text-stonegold">Beauty for every space.</span>
+        </h1>
+
+        <p class="mt-7 max-w-2xl text-base leading-8 text-neutral-300 sm:text-lg">
+          Mancherial Minerals supplies distinctive natural stone and tile materials for residences,
+          commercial projects, dealers and architectural applications.
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#products" class="rounded-full bg-stonegold px-7 py-3.5 font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#a77835]">
+            Explore Materials
+          </a>
+          <a href="#contact" class="rounded-full border border-white/25 bg-white/5 px-7 py-3.5 font-semibold text-white backdrop-blur transition hover:bg-white hover:text-neutral-900">
+            Contact Us
+          </a>
+        </div>
+
+        <div class="mt-12 grid max-w-xl grid-cols-3 gap-5 border-t border-white/15 pt-7">
+          <div>
+            <p class="text-2xl font-bold text-white">100%</p>
+            <p class="mt-1 text-xs uppercase tracking-widest text-neutral-400">Natural Stone</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">B2B</p>
+            <p class="mt-1 text-xs uppercase tracking-widest text-neutral-400">Bulk Supply</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">India</p>
+            <p class="mt-1 text-xs uppercase tracking-widest text-neutral-400">Project Delivery</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:col-span-5 lg:block">
+        <div class="relative mx-auto max-w-md">
+          <div class="absolute -inset-6 rounded-[2.5rem] border border-stonegold/25"></div>
+          <img src="assets/stone-core-01.jpeg" alt="Natural stone core sample"
+               class="relative h-[570px] w-full rounded-[2.2rem] object-cover shadow-2xl" />
+          <div class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-neutral-950/75 p-5 text-white backdrop-blur-lg">
+            <p class="text-xs uppercase tracking-[0.25em] text-stonegold">Featured Material</p>
+            <p class="mt-2 font-display text-2xl">Rose Vein Natural Stone</p>
+            <p class="mt-1 text-sm text-neutral-300">Elegant layered texture for premium interior and exterior finishes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="stone-texture py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
+      <div class="grid grid-cols-2 gap-4">
+        <img src="assets/stone-core-03.jpeg" alt="Stone sample" class="h-72 w-full rounded-3xl object-cover shadow-soft" />
+        <img src="assets/stone-core-07.jpeg" alt="Stone sample" class="mt-10 h-72 w-full rounded-3xl object-cover shadow-soft" />
+      </div>
+
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.28em] text-stonegold">About Mancherial Minerals</p>
+        <h2 class="mt-4 font-display text-4xl leading-tight text-charcoal sm:text-5xl">
+          Natural character, carefully selected.
+        </h2>
+        <p class="mt-6 leading-8 text-neutral-600">
+          We focus on sourcing and supplying natural stone with attractive colours, layered patterns
+          and durable performance. Every material is visually inspected to help customers choose
+          suitable stone for flooring, wall cladding, countertops, decorative applications and tile production.
+        </p>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="rounded-2xl border border-neutral-200 bg-white/80 p-5">
+            <p class="font-semibold text-charcoal">Material Selection</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600">Carefully reviewed colour, pattern, texture and structural quality.</p>
+          </div>
+          <div class="rounded-2xl border border-neutral-200 bg-white/80 p-5">
+            <p class="font-semibold text-charcoal">Reliable Supply</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600">Support for individual projects, dealers and bulk requirements.</p>
+          </div>
+          <div class="rounded-2xl border border-neutral-200 bg-white/80 p-5">
+            <p class="font-semibold text-charcoal">Project Guidance</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600">Assistance in selecting material based on design and application.</p>
+          </div>
+          <div class="rounded-2xl border border-neutral-200 bg-white/80 p-5">
+            <p class="font-semibold text-charcoal">Distinctive Finish</p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600">Natural tones that make every installation unique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="bg-neutral-950 py-24 text-white">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.28em] text-stonegold">Our Materials</p>
+        <h2 class="mt-4 font-display text-4xl sm:text-5xl">Stone for inspired spaces</h2>
+        <p class="mt-5 leading-8 text-neutral-400">
+          Suitable for residential, commercial and architectural applications.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-stonegold/50 hover:bg-white/10">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-stonegold/15 text-stonegold">
+            <span class="text-xl">◆</span>
+          </div>
+          <h3 class="mt-5 font-display text-2xl">Flooring Stone</h3>
+          <p class="mt-3 text-sm leading-7 text-neutral-400">Durable natural stone for homes, offices, showrooms and hospitality spaces.</p>
+        </article>
+
+        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-stonegold/50 hover:bg-white/10">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-stonegold/15 text-stonegold">
+            <span class="text-xl">▦</span>
+          </div>
+          <h3 class="mt-5 font-display text-2xl">Wall Cladding</h3>
+          <p class="mt-3 text-sm leading-7 text-neutral-400">Natural textures for feature walls, façades and premium decorative surfaces.</p>
+        </article>
+
+        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-stonegold/50 hover:bg-white/10">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-stonegold/15 text-stonegold">
+            <span class="text-xl">▰</span>
+          </div>
+          <h3 class="mt-5 font-display text-2xl">Cut-to-Size Tiles</h3>
+          <p class="mt-3 text-sm leading-7 text-neutral-400">Stone processed into practical sizes for easy installation and consistent layouts.</p>
+        </article>
+
+        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-stonegold/50 hover:bg-white/10">
+          <div class="grid h-12 w-12 place-items-center rounded-2xl bg-stonegold/15 text-stonegold">
+            <span class="text-xl">◈</span>
+          </div>
+          <h3 class="mt-5 font-display text-2xl">Custom Projects</h3>
+          <p class="mt-3 text-sm leading-7 text-neutral-400">Material consultation and supply support for specialised project requirements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-24">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.28em] text-stonegold">Material Gallery</p>
+          <h2 class="mt-4 font-display text-4xl text-charcoal sm:text-5xl">Colours formed by nature</h2>
+        </div>
+        <p class="max-w-xl leading-7 text-neutral-600">
+          Actual shade and pattern may vary from piece to piece, making each installation naturally unique.
+        </p>
+      </div>
+
+      <div class="mt-12 grid auto-rows-[260px] gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <figure class="gallery-card relative overflow-hidden rounded-3xl lg:row-span-2">
+          <img src="assets/stone-core-01.jpeg" alt="Purple and rose natural stone sample" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Rose Layer Stone</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card relative overflow-hidden rounded-3xl">
+          <img src="assets/stone-core-02.jpeg" alt="Beige natural stone sample" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Desert Beige</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card relative overflow-hidden rounded-3xl">
+          <img src="assets/stone-core-03.jpeg" alt="Lavender natural stone sample" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Lavender Vein</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card relative overflow-hidden rounded-3xl lg:row-span-2">
+          <img src="assets/stone-core-04.jpeg" alt="Red natural stone sample" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Rust Red Stone</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card relative overflow-hidden rounded-3xl">
+          <img src="assets/stone-core-06.jpeg" alt="Pink natural stone drill core" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Pink Mineral Core</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-card relative overflow-hidden rounded-3xl">
+          <img src="assets/stone-core-07.jpeg" alt="Grey natural stone sample" class="h-full w-full object-cover" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5 text-white">
+            <p class="font-semibold">Silver Mist</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="bg-cream py-24">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[0.28em] text-stonegold">From the Site</p>
+        <h2 class="mt-4 font-display text-4xl text-charcoal sm:text-5xl">See the material closely</h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-3">
+        <video class="aspect-[9/16] max-h-[600px] w-full rounded-3xl bg-black object-cover shadow-soft" controls preload="metadata">
+          <source src="assets/quarry-video-01.mp4" type="video/mp4" />
+        </video>
+        <video class="aspect-[9/16] max-h-[600px] w-full rounded-3xl bg-black object-cover shadow-soft" controls preload="metadata">
+          <source src="assets/quarry-video-02.mp4" type="video/mp4" />
+        </video>
+        <video class="aspect-[9/16] max-h-[600px] w-full rounded-3xl bg-black object-cover shadow-soft" controls preload="metadata">
+          <source src="assets/quarry-video-03.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section id="contact" class="relative overflow-hidden bg-wine py-24 text-white">
+    <div class="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-stonegold/20 blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-black/20 blur-3xl"></div>
+
+    <div class="relative mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:px-8">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.28em] text-[#e7c99d]">Request a Quote</p>
+        <h2 class="mt-4 max-w-xl font-display text-4xl leading-tight sm:text-5xl">
+          Tell us about your tile or stone requirement.
+        </h2>
+        <p class="mt-6 max-w-xl leading-8 text-white/75">
+          Share the required quantity, application, preferred colour and delivery location.
+          Our team will contact you with suitable options.
+        </p>
+
+        <div class="mt-9 space-y-4 text-sm">
+          <p class="flex items-center gap-3"><span class="text-stonegold">●</span> Mancherial, Telangana, India</p>
+          <p class="flex items-center gap-3"><span class="text-stonegold">●</span> Phone: +91 XXXXX XXXXX</p>
+          <p class="flex items-center gap-3"><span class="text-stonegold">●</span> Email: sales@mancherialminerals.com</p>
+        </div>
+      </div>
+
+      <form class="rounded-3xl bg-white p-7 text-neutral-800 shadow-2xl sm:p-9" onsubmit="sendToWhatsApp(event)">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label class="mb-2 block text-sm font-semibold">Your Name</label>
+            <input id="name" required type="text" class="w-full rounded-xl border border-neutral-200 px-4 py-3 outline-none transition focus:border-stonegold focus:ring-4 focus:ring-stonegold/10" placeholder="Enter your name" />
+          </div>
+          <div>
+            <label class="mb-2 block text-sm font-semibold">Phone Number</label>
+            <input id="phone" required type="tel" class="w-full rounded-xl border border-neutral-200 px-4 py-3 outline-none transition focus:border-stonegold focus:ring-4 focus:ring-stonegold/10" placeholder="+91" />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label class="mb-2 block text-sm font-semibold">Material Required</label>
+          <select id="material" class="w-full rounded-xl border border-neutral-200 px-4 py-3 outline-none transition focus:border-stonegold focus:ring-4 focus:ring-stonegold/10">
+            <option>Flooring Stone</option>
+            <option>Wall Cladding</option>
+            <option>Cut-to-Size Tiles</option>
+            <option>Bulk Natural Stone</option>
+            <option>Other Requirement</option>
+          </select>
+        </div>
+
+        <div class="mt-5">
+          <label class="mb-2 block text-sm font-semibold">Requirement Details</label>
+          <textarea id="message" rows="4" class="w-full rounded-xl border border-neutral-200 px-4 py-3 outline-none transition focus:border-stonegold focus:ring-4 focus:ring-stonegold/10" placeholder="Quantity, location and preferred colour"></textarea>
+        </div>
+
+        <button class="mt-6 w-full rounded-xl bg-charcoal px-6 py-3.5 font-semibold text-white transition hover:bg-stonegold">
+          Send Enquiry on WhatsApp
+        </button>
+        <p class="mt-3 text-center text-xs text-neutral-500">Replace the WhatsApp number in the JavaScript before publishing.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-950 py-10 text-neutral-400">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 text-center md:flex-row md:text-left lg:px-8">
+      <div>
+        <p class="font-display text-xl text-white">Mancherial Minerals</p>
+        <p class="mt-1 text-sm">Natural Stone & Tiles</p>
+      </div>
+      <p class="text-sm">© <span id="year"></span> Mancherial Minerals. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+
+      const whatsappNumber = '91XXXXXXXXXX'; // Replace with your WhatsApp number
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const material = document.getElementById('material').value;
+      const message = document.getElementById('message').value;
+
+      const text =
+        `Hello Mancherial Minerals,%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Material: ${encodeURIComponent(material)}%0A` +
+        `Requirement: ${encodeURIComponent(message)}`;
+
+      window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
